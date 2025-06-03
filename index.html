@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Transactions tracker</title>
+    <title>Transactions tracker</title>
     <link rel="stylesheet" href="style/main.css" />
+    <!-- Add this in the <head> section, before your main.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
   <h1>Expense Tracker</h1>
 
-    <div class="balance container">
-        <h3>Current Balance</h3>
-        <h2>₹<span id="balance">0.00</span></h2>
+  <div class="balance container">
+    <h3>Current Balance</h3>
+    <h2>₹<span id="balance">0.00</span></h2>
 
-    <div class=" summary">  
-     <div id="income">
-      <h4>Income</h4>
+    <div class="summary">  
+      <div id="income">
+        <h4>Income</h4>
         <p class="money_plus">₹<span id="money_plus">0.00</span></p>
-     </div>
-     <div id="expense">
-      <h4>Expense</h4>
+      </div>
+      <div id="expense">
+        <h4>Expense</h4>
         <p class="money_minus">₹<span id="money_minus">0.00</span></p>
-     </div>
-   </div>
-
-   <div class="data">
-     <h3>Add new transaction</h3>
-      <form id="form">
-        <input type="number" id="amount" placeholder="Enter amount" required >
-        <input type="text" id="text" placeholder="Enter description" required >
-         <button type="submit">Add Transaction</button>
-      </form>
-   </div>
-
-   <div class="history-section">
-      <h3>History</h3>
-       <ul id="list" class="list">
-        <li class="placeholder">No transactions yet. Start tracking your money </li>
-       </ul>
+      </div>
     </div>
+  </div>
+
+  <div class="data">
+    <h3>Add new transaction</h3>
+    <form id="form">
+      <input type="varche" id="amount" placeholder="Enter amount" required>
+      <input type="text" id="text" placeholder="Enter description" required>
+      <select id="transaction_type" required>
+        <option value="" disabled selected>Select transaction type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+    </form>
+  </div>
+
+  <div class="history-section">
+    <h3>History</h3>
+    <ul id="list" class="list">
+      <li class="placeholder">No transactions yet. Start tracking your money</li>
+    </ul>
+  </div>
 </div> 
 <footer class="footer">
-    <p>Powered by 💡 ideas and 💻 code | Created by Janavi Kurekar
-© 2025 Expense Tracker</p>
+  <p>Powered by 💡 ideas and 💻 code | Created by Janavi Kurekar © 2025 Expense Tracker</p>
 </footer>
 
 <script src="scripts/app.js"></script>  
-
 </body>
 </html>
+
